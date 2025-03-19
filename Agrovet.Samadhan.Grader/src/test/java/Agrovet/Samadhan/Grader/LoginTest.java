@@ -39,7 +39,7 @@ public class LoginTest extends BaseClass{
 	
 	@Test(priority = 1)
 	public void verifyUserAbleToLoginWithInvalidMobileNumber() {
-		String mobileNumber=excelUtility.readDataFromExcel("TestData", 0, 1);
+		String mobileNumber=excelUtility.readDataFromExcel("TestData", 8, 1);
 		driverUtility.implicitlyWait(10);
 		loginScreen.ClickOnSelectRoleTextField();
 		loginScreen.ClickOnGrader();
@@ -51,7 +51,7 @@ public class LoginTest extends BaseClass{
 	
 	@Test(priority = 2)
 	public void verifyUserAbleToLoginWithInvalidOtp() {
-		String mobileNumber=excelUtility.readDataFromExcel("TestData", 8, 1);
+		String mobileNumber=excelUtility.readDataFromExcel("TestData", 0, 1);
 		String firstDigit=excelUtility.readDataFromExcel("TestData", 1, 1);
 		String secondDigit=excelUtility.readDataFromExcel("TestData", 2, 1);
 		String thirdDigit=excelUtility.readDataFromExcel("TestData", 3, 1);		
