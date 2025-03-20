@@ -35,9 +35,9 @@ public class AttendanceScreen {
 	
 	public void clickOnApplyLeaveTab() {
 		try {
+			String tab=applyLeaveTab.getText();
 			applyLeaveTab.click();
-//			System.out.println("clicked on "+ applyLeaveTab.getText());
-			System.out.println("clicked on Apply leave Tab");
+			System.out.println("Clicked on "+tab+" tab");
 		}catch (Exception e) {
 			System.out.println("Not able to click on apply leave Tab");
 		}
@@ -45,8 +45,9 @@ public class AttendanceScreen {
 	
 	public void clickOnPresentAbsentDaysTab() {
 		try {
+			String tab=presentAbsentDaysTab.getText();
 			presentAbsentDaysTab.click();
-			System.out.println("Clicked on presentDay Tab");
+			System.out.println("Clicked on "+tab+" tab");
 		}catch (Exception e) {
 			System.out.println("Not able to click on presentDay Tab");
 		}

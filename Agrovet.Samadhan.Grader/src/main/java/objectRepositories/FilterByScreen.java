@@ -85,8 +85,9 @@ public class FilterByScreen {
 	
 	public void clickOnSaveButton() {
 		try {
+			String button=saveButton.getText();
 			saveButton.click();
-			System.out.println("Clicked on saveButton");
+			System.out.println("Clicked on "+button+" button");
 		}catch (Exception e) {
 			System.out.println("Not able to click on saveButton");
 		}
@@ -94,8 +95,9 @@ public class FilterByScreen {
 	
 	public void clickOnCloseButton() {
 		try {
+			String button=closeButton.getText();
 			closeButton.click();
-			System.out.println("Clicked on closeButton");
+			System.out.println("Clicked on "+button+" button");
 		}catch (Exception e) {
 			System.out.println("Not able to click on closeButton");
 		}

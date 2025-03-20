@@ -64,8 +64,9 @@ public class HamburgerScreen {
 	
 	public void clickOnlogoutTab() {
 		try {
+			String button=logoutTab.getText();
 			logoutTab.click();
-			System.out.println("Clicked on logout tab");
+			System.out.println("Clicked on "+button+" button");
 		}catch (Exception e) {
 			System.out.println("Not able to click on logout tab");
 		}

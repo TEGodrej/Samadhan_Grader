@@ -139,8 +139,9 @@ public class EnterGradingDetailsScreen {
 	
 	public void clickOnSubmitButton() {
 		try {
+			String tab=submitButton.getText();
 			submitButton.click();
-			System.out.println("clicked on submitButton");
+			System.out.println("Clicked on "+tab+" button");
 		}catch (Exception e) {
 			System.out.println("Not able to click on submitButton");
 		}
@@ -156,8 +157,9 @@ public class EnterGradingDetailsScreen {
 	
 	public void clickOnOkayButton() {
 		try {
+			String tab=okayButton.getText();
 			okayButton.click();
-			System.out.println("clicked on okay button");
+			System.out.println("Clicked on "+tab+" button");
 		}catch (Exception e) {
 			System.out.println("Not able to click on okay button");
 		}

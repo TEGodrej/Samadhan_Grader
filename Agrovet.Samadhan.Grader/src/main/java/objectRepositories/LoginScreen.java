@@ -51,7 +51,9 @@ public class LoginScreen extends BaseClass{
 	
 	public void ClickOnSelectRoleTextField() {
 		try {
+			String roleTextField=selectRoleTextField.getText();
 			selectRoleTextField.click();
+			System.out.println("Clicked on "+roleTextField +" textfield");
 		}catch (Exception e) {
 			System.out.println("Not able to click on select role text field");
 		}
@@ -59,7 +61,9 @@ public class LoginScreen extends BaseClass{
 	
 	public void ClickOnGrader() {
 		try {
+			String role=grader.getText();
 			grader.click();
+			System.out.println("Clicked on "+ role +" role");
 		}catch (Exception e) {
 			System.out.println("Not able to click on grader");
 		}
@@ -70,8 +74,9 @@ public class LoginScreen extends BaseClass{
 			mobileNumberTextField.click();
 			driverUtility.threadWait(2);
 			mobileNumberTextField.sendKeys(key);
+			System.out.println("Entered Mobile Number Into Mobile Number TextField");
 		}catch (Exception e) {
-			System.out.println("Not able to perform action on mobile Number TextField");
+			System.out.println("Not Able To Perform Action On Mobile Number TextField");
 		}
 	}
 	

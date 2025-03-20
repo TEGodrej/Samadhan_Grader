@@ -44,8 +44,9 @@ public class ProfileScreen {
 	
 	public void clickOnProfilePicture() {
 		try {
+			String button=profilePicture.getText();
 			profilePicture.click();
-			System.out.println("clicked on profile picture");
+			System.out.println("clicked on "+ button +" Button");
 		}catch (Exception e) {
 			System.out.println("Not able to click on profile picture");
 		}
@@ -53,8 +54,9 @@ public class ProfileScreen {
 	
 	public void clickOnGalleryButton() {
 		try {
+			String button=galleryButton.getText();
 			galleryButton.click();
-			System.out.println("clicked on gallery button");
+			System.out.println("clicked on "+ button +" Button");
 		}catch (Exception e) {
 			System.out.println("Not able to click on gallery button");
 		}
@@ -62,8 +64,9 @@ public class ProfileScreen {
 	
 	public void clickOnCameraButton() {
 		try {
+			String button=cameraButton.getText();
 			cameraButton.click();
-			System.out.println("clicked on camera button");
+			System.out.println("clicked on "+ button +" Button");
 		}catch (Exception e) {
 			System.out.println("click on camera button");
 		}

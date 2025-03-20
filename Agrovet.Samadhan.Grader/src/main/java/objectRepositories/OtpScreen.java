@@ -49,7 +49,6 @@ public class OtpScreen extends BaseClass{
 	
 	public void sendKeysToFirstOtpTextBox(String Key) {
 		try {
-//			String Key=excelUtility.readDataFromExcel("TestData", 1, 1);
 			firstOtpTextBox.sendKeys(Key);
 		}catch (Exception e) {
 			System.out.println("Not able to send key to firstOtpTextBox");
@@ -58,17 +57,14 @@ public class OtpScreen extends BaseClass{
 	
 	public void sendKeyToSecondOtpTextBox(String Key) {
 		try {
-//			String Key=excelUtility.readDataFromExcel("TestData", 2, 1);
 			secondOtpTextBox.sendKeys(Key);
 		}catch (Exception e) {
-//			secondOtpTextBox.sendKeys(Key);
-//			System.out.println("Not able to send key to secondOtpTextBox");
+			System.out.println("Not able to send key to secondOtpTextBox");
 		}
 	}
 	
 	public void sendKeyToThirdOtpTextBox(String key) {
 		try {
-//			String key=excelUtility.readDataFromExcel("TestData", 3, 1);
 			thirdOtpTextBox.sendKeys(key);
 		}catch (Exception e) {
 			System.out.println("Not able to send key to thirdOtpTextBox");
@@ -77,7 +73,6 @@ public class OtpScreen extends BaseClass{
 	
 	public void sendKeyToForthOtpTextBox(String key) {
 		try {
-//			String key=excelUtility.readDataFromExcel("TestData", 4, 1);
 			forthOtpTextBox.sendKeys(key);
 		}catch (Exception e) {
 			System.out.println("Not able to send key to forthOtpTextBox");
@@ -86,7 +81,9 @@ public class OtpScreen extends BaseClass{
 	
 	public void clickOnLoginButton() {
 		try {
+			String button=loginButton.getText();
 			loginButton.click();
+			System.out.println("Clicked on "+button+" button");
 		}catch (Exception e) {
 			System.out.println("Not able to click on " + loginButton.getText());
 		}
@@ -94,9 +91,11 @@ public class OtpScreen extends BaseClass{
 	
 	public void clickOnOkayButton() {
 		try {
+			String button=okayButton.getText(); 
 			okayButton.click();
+			System.out.println("Clicked on "+button+" button");
 		}catch (Exception e) {
-			System.out.println("Not able to click on " + okayButton.getText());
+			System.out.println("Not able to click on Okay Button" + okayButton.getText());
 		}
 	}
 	
@@ -122,9 +121,7 @@ public class OtpScreen extends BaseClass{
 	public void verifyOkayMessage() {
 		try {
 			assertTrue(!successMessage.isDisplayed());
-//			System.out.println(successMessage.getText()+ " is displayed");
 		}catch (Exception e) {
-//			assertTrue(!successMessage.isDisplayed());
 			System.out.println("successMessage is not displayed");
 		}
 	}

@@ -49,6 +49,7 @@ public class BaseClass {
 	public static FilterByScreen filterByScreen;
 	public static SchedularScreen schedularScreen;
 	public static LogoutScreen  logoutScreen;
+	public static ScreenShot screenshot;
 	
 //	@BeforeSuite
 //	public void connectToDB(String url, String username, String password)  {
@@ -117,6 +118,7 @@ public class BaseClass {
 			filterByScreen = new FilterByScreen(driver);
 			schedularScreen = new SchedularScreen(driver); 
 			logoutScreen = new LogoutScreen(driver);
+			screenshot= new ScreenShot();
 			
 		}
 		

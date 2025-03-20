@@ -10,15 +10,15 @@ public class GradingRequestTest extends BaseClass{
 
 	@Test(priority = 0)
 	public void verifyUserAbleToSendRequestedTransactionIdForGrading() {
-		String smallBunches="1";
-		String bouquetBunches="2";
-		String looseFruit="3";
-		String RottenBunches="4";
-		String underRipeBunches="5";
-		String unripeBunches="6";
-		String damagedBunches="7";
-		String longStalkBunches="5";
-		String comment="ok";
+		String smallBunches=excelUtility.readDataFromExcel("TestData", 9, 1);
+		String bouquetBunches=excelUtility.readDataFromExcel("TestData", 10, 1);
+		String looseFruit=excelUtility.readDataFromExcel("TestData", 11, 1);
+		String RottenBunches=excelUtility.readDataFromExcel("TestData", 12, 1);
+		String underRipeBunches=excelUtility.readDataFromExcel("TestData", 13, 1);
+		String unripeBunches=excelUtility.readDataFromExcel("TestData", 14, 1);
+		String damagedBunches=excelUtility.readDataFromExcel("TestData", 15, 1);
+		String longStalkBunches=excelUtility.readDataFromExcel("TestData", 16, 1);
+		String comment=excelUtility.readDataFromExcel("TestData", 17, 1);
 		driverUtility.implicitlyWait(10);
 		homeScreen.clickOnTotalGradingRequest();
 		gradingRequestScreen.clickOnTransactionId();
@@ -39,14 +39,14 @@ public class GradingRequestTest extends BaseClass{
 	
 	@Test(priority = 1)
 	public void verifyUserAbleToSendRequestedTransactionIdForGradingWithoutEnteringSmallBunchDetails() {
-		String bouquetBunches="2";
-		String looseFruit="3";
-		String RottenBunches="4";
-		String underRipeBunches="5";
-		String unripeBunches="6";
-		String damagedBunches="7";
-		String longStalkBunches="5";
-		String comment="ok";
+		String bouquetBunches=excelUtility.readDataFromExcel("TestData", 10, 1);
+		String looseFruit=excelUtility.readDataFromExcel("TestData", 11, 1);
+		String RottenBunches=excelUtility.readDataFromExcel("TestData", 12, 1);
+		String underRipeBunches=excelUtility.readDataFromExcel("TestData", 13, 1);
+		String unripeBunches=excelUtility.readDataFromExcel("TestData", 14, 1);
+		String damagedBunches=excelUtility.readDataFromExcel("TestData", 15, 1);
+		String longStalkBunches=excelUtility.readDataFromExcel("TestData", 16, 1);
+		String comment=excelUtility.readDataFromExcel("TestData", 17, 1);
 		driverUtility.implicitlyWait(10);
 		homeScreen.clickOnTotalGradingRequest();
 		gradingRequestScreen.clickOnTransactionId();
@@ -66,14 +66,14 @@ public class GradingRequestTest extends BaseClass{
 	
 	@Test(priority = 2)
 	public void verifyUserAbleToSendRequestedTransactionIdForGradingWithoutEnteringBouquetBunchDetails() {
-		String smallBunches="1";
-		String looseFruit="3";
-		String RottenBunches="4";
-		String underRipeBunches="5";
-		String unripeBunches="6";
-		String damagedBunches="7";
-		String longStalkBunches="5";
-		String comment="ok";
+		String smallBunches=excelUtility.readDataFromExcel("TestData", 9, 1);
+		String looseFruit=excelUtility.readDataFromExcel("TestData", 11, 1);
+		String RottenBunches=excelUtility.readDataFromExcel("TestData", 12, 1);
+		String underRipeBunches=excelUtility.readDataFromExcel("TestData", 13, 1);
+		String unripeBunches=excelUtility.readDataFromExcel("TestData", 14, 1);
+		String damagedBunches=excelUtility.readDataFromExcel("TestData", 15, 1);
+		String longStalkBunches=excelUtility.readDataFromExcel("TestData", 16, 1);
+		String comment=excelUtility.readDataFromExcel("TestData", 17, 1);
 		driverUtility.implicitlyWait(10);
 		homeScreen.clickOnTotalGradingRequest();
 		gradingRequestScreen.clickOnTransactionId();
@@ -93,14 +93,14 @@ public class GradingRequestTest extends BaseClass{
 	
 	@Test(priority = 3)
 	public void verifyUserAbleToSendRequestedTransactionIdForGradingWithoutEnteringLooseFruitDetails() {
-		String smallBunches="1";
-		String bouquetBunches="2";
-		String RottenBunches="4";
-		String underRipeBunches="5";
-		String unripeBunches="6";
-		String damagedBunches="7";
-		String longStalkBunches="5";
-		String comment="ok";
+		String smallBunches=excelUtility.readDataFromExcel("TestData", 9, 1);
+		String bouquetBunches=excelUtility.readDataFromExcel("TestData", 10, 1);
+		String RottenBunches=excelUtility.readDataFromExcel("TestData", 12, 1);
+		String underRipeBunches=excelUtility.readDataFromExcel("TestData", 13, 1);
+		String unripeBunches=excelUtility.readDataFromExcel("TestData", 14, 1);
+		String damagedBunches=excelUtility.readDataFromExcel("TestData", 15, 1);
+		String longStalkBunches=excelUtility.readDataFromExcel("TestData", 16, 1);
+		String comment=excelUtility.readDataFromExcel("TestData", 17, 1);
 		driverUtility.implicitlyWait(10);
 		homeScreen.clickOnTotalGradingRequest();
 		gradingRequestScreen.clickOnTransactionId();
@@ -120,14 +120,14 @@ public class GradingRequestTest extends BaseClass{
 	
 	@Test(priority = 4)
 	public void verifyUserAbleToSendRequestedTransactionIdForGradingWithoutEnteringRottenBunchDetails() {
-		String smallBunches="1";
-		String bouquetBunches="2";
-		String looseFruit="3";
-		String underRipeBunches="5";
-		String unripeBunches="6";
-		String damagedBunches="7";
-		String longStalkBunches="5";
-		String comment="ok";
+		String smallBunches=excelUtility.readDataFromExcel("TestData", 9, 1);
+		String bouquetBunches=excelUtility.readDataFromExcel("TestData", 10, 1);
+		String looseFruit=excelUtility.readDataFromExcel("TestData", 11, 1);
+		String underRipeBunches=excelUtility.readDataFromExcel("TestData", 13, 1);
+		String unripeBunches=excelUtility.readDataFromExcel("TestData", 14, 1);
+		String damagedBunches=excelUtility.readDataFromExcel("TestData", 15, 1);
+		String longStalkBunches=excelUtility.readDataFromExcel("TestData", 16, 1);
+		String comment=excelUtility.readDataFromExcel("TestData", 17, 1);
 		driverUtility.implicitlyWait(10);
 		homeScreen.clickOnTotalGradingRequest();
 		gradingRequestScreen.clickOnTransactionId();
@@ -147,14 +147,14 @@ public class GradingRequestTest extends BaseClass{
 	
 	@Test(priority = 5)
 	public void verifyUserAbleToSendRequestedTransactionIdForGradingWithoutEnteringUnderRippenBunchDetails() {
-		String smallBunches="1";
-		String bouquetBunches="2";
-		String looseFruit="3";
-		String RottenBunches="4";
-		String unripeBunches="6";
-		String damagedBunches="7";
-		String longStalkBunches="5";
-		String comment="ok";
+		String smallBunches=excelUtility.readDataFromExcel("TestData", 9, 1);
+		String bouquetBunches=excelUtility.readDataFromExcel("TestData", 10, 1);
+		String looseFruit=excelUtility.readDataFromExcel("TestData", 11, 1);
+		String RottenBunches=excelUtility.readDataFromExcel("TestData", 12, 1);
+		String unripeBunches=excelUtility.readDataFromExcel("TestData", 14, 1);
+		String damagedBunches=excelUtility.readDataFromExcel("TestData", 15, 1);
+		String longStalkBunches=excelUtility.readDataFromExcel("TestData", 16, 1);
+		String comment=excelUtility.readDataFromExcel("TestData", 17, 1);
 		driverUtility.implicitlyWait(10);
 		homeScreen.clickOnTotalGradingRequest();
 		gradingRequestScreen.clickOnTransactionId();
@@ -174,14 +174,14 @@ public class GradingRequestTest extends BaseClass{
 	
 	@Test(priority = 6)
 	public void verifyUserAbleToSendRequestedTransactionIdForGradingWithoutEnteringUnripnBunchDetails() {
-		String smallBunches="1";
-		String bouquetBunches="2";
-		String looseFruit="3";
-		String RottenBunches="4";
-		String underRipeBunches="5";
-		String damagedBunches="7";
-		String longStalkBunches="5";
-		String comment="ok";
+		String smallBunches=excelUtility.readDataFromExcel("TestData", 9, 1);
+		String bouquetBunches=excelUtility.readDataFromExcel("TestData", 10, 1);
+		String looseFruit=excelUtility.readDataFromExcel("TestData", 11, 1);
+		String RottenBunches=excelUtility.readDataFromExcel("TestData", 12, 1);
+		String underRipeBunches=excelUtility.readDataFromExcel("TestData", 13, 1);
+		String damagedBunches=excelUtility.readDataFromExcel("TestData", 15, 1);
+		String longStalkBunches=excelUtility.readDataFromExcel("TestData", 16, 1);
+		String comment=excelUtility.readDataFromExcel("TestData", 17, 1);
 		driverUtility.implicitlyWait(10);
 		homeScreen.clickOnTotalGradingRequest();
 		gradingRequestScreen.clickOnTransactionId();
@@ -201,14 +201,14 @@ public class GradingRequestTest extends BaseClass{
 	
 	@Test(priority = 7)
 	public void verifyUserAbleToSendRequestedTransactionIdForGradingWithoutEnteringDamagedBunchDetails() {
-		String smallBunches="1";
-		String bouquetBunches="2";
-		String looseFruit="3";
-		String RottenBunches="4";
-		String underRipeBunches="5";
-		String unripeBunches="6";
-		String longStalkBunches="5";
-		String comment="ok";
+		String smallBunches=excelUtility.readDataFromExcel("TestData", 9, 1);
+		String bouquetBunches=excelUtility.readDataFromExcel("TestData", 10, 1);
+		String looseFruit=excelUtility.readDataFromExcel("TestData", 11, 1);
+		String RottenBunches=excelUtility.readDataFromExcel("TestData", 12, 1);
+		String underRipeBunches=excelUtility.readDataFromExcel("TestData", 13, 1);
+		String unripeBunches=excelUtility.readDataFromExcel("TestData", 14, 1);
+		String longStalkBunches=excelUtility.readDataFromExcel("TestData", 16, 1);
+		String comment=excelUtility.readDataFromExcel("TestData", 17, 1);
 		driverUtility.implicitlyWait(10);
 		homeScreen.clickOnTotalGradingRequest();
 		gradingRequestScreen.clickOnTransactionId();
@@ -228,14 +228,14 @@ public class GradingRequestTest extends BaseClass{
 	
 	@Test(priority = 8)
 	public void verifyUserAbleToSendRequestedTransactionIdForGradingWithoutEnteringLongStalkBunchDetails() {
-		String smallBunches="1";
-		String bouquetBunches="2";
-		String looseFruit="3";
-		String RottenBunches="4";
-		String underRipeBunches="5";
-		String unripeBunches="6";
-		String damagedBunches="7";
-		String comment="ok";
+		String smallBunches=excelUtility.readDataFromExcel("TestData", 9, 1);
+		String bouquetBunches=excelUtility.readDataFromExcel("TestData", 10, 1);
+		String looseFruit=excelUtility.readDataFromExcel("TestData", 11, 1);
+		String RottenBunches=excelUtility.readDataFromExcel("TestData", 12, 1);
+		String underRipeBunches=excelUtility.readDataFromExcel("TestData", 13, 1);
+		String unripeBunches=excelUtility.readDataFromExcel("TestData", 14, 1);
+		String damagedBunches=excelUtility.readDataFromExcel("TestData", 15, 1);
+		String comment=excelUtility.readDataFromExcel("TestData", 17, 1);
 		driverUtility.implicitlyWait(10);
 		homeScreen.clickOnTotalGradingRequest();
 		gradingRequestScreen.clickOnTransactionId();
@@ -255,14 +255,14 @@ public class GradingRequestTest extends BaseClass{
 	
 	@Test(priority = 9)
 	public void verifyUserAbleToSendRequestedTransactionIdForGradingWithoutEnteringComment() {
-		String smallBunches="1";
-		String bouquetBunches="2";
-		String looseFruit="3";
-		String RottenBunches="4";
-		String underRipeBunches="5";
-		String unripeBunches="6";
-		String damagedBunches="7";
-		String longStalkBunches="5";
+		String smallBunches=excelUtility.readDataFromExcel("TestData", 9, 1);
+		String bouquetBunches=excelUtility.readDataFromExcel("TestData", 10, 1);
+		String looseFruit=excelUtility.readDataFromExcel("TestData", 11, 1);
+		String RottenBunches=excelUtility.readDataFromExcel("TestData", 12, 1);
+		String underRipeBunches=excelUtility.readDataFromExcel("TestData", 13, 1);
+		String unripeBunches=excelUtility.readDataFromExcel("TestData", 14, 1);
+		String damagedBunches=excelUtility.readDataFromExcel("TestData", 15, 1);
+		String longStalkBunches=excelUtility.readDataFromExcel("TestData", 16, 1);
 		driverUtility.implicitlyWait(10);
 		homeScreen.clickOnTotalGradingRequest();
 		gradingRequestScreen.clickOnTransactionId();

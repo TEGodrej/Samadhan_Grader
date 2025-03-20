@@ -29,7 +29,7 @@ public class ListenerUtility implements ITestListener {
 		String failed = result.getMethod().getMethodName();
 		TakesScreenshot ss=(TakesScreenshot)BaseClass.staticdriver;
 		File source=ss.getScreenshotAs(OutputType.FILE);
-		File dst=new File("failed"+failed+".jpg");
+		File dst=new File("Skipped"+failed+".jpg");
 		try {
 		   FileUtils.copyFile(source, dst);
 		}

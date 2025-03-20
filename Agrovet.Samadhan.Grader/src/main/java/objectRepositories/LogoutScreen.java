@@ -22,8 +22,9 @@ public class LogoutScreen {
 	
 	public void clickOnYesButton() {
 		try {
+			String button=yesButton.getText();
 			yesButton.click();
-			System.out.println("clicked on Yes Button");
+			System.out.println("clicked on "+button+ " Button");
 		}catch (Exception e) {
 			System.out.println("Not able to click on Yes Button");
 		}
@@ -31,8 +32,9 @@ public class LogoutScreen {
 	
 	public void clickOnNoButton() {
 		try {
+			String button=noButton.getText();
 			noButton.click();
-			System.out.println("Clicked on No Button");
+			System.out.println("Clicked on "+button+ " Button");
 		}catch (Exception e) {
 			System.out.println("Not able to click on No Button");
 		}

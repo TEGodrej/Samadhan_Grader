@@ -85,9 +85,10 @@ public class ApplyForLeaveScreen extends BaseClass{
 		try {
 			String date=excelUtility.readDataFromExcel("TestData", 7, 1);
 			WebElement Date = driver.findElement(AppiumBy.xpath("//android.view.ViewGroup[@content-desc='"+date+"']"));
+			String date1=Date.getText();
 			Date.click();
-			System.out.println("clicked on Date");
-//			System.out.println("clicked on "+ Date.getText());
+//			System.out.println("clicked on Date");
+			System.out.println("clicked on "+date1);
 		}catch (Exception e) {
 			System.out.println("Not able to click on date");
 		}
@@ -97,9 +98,10 @@ public class ApplyForLeaveScreen extends BaseClass{
 		try {
 			String date=excelUtility.readDataFromExcel("TestData", 6, 1);
 			WebElement Date = driver.findElement(AppiumBy.xpath("//android.view.ViewGroup[@content-desc='"+date+"']"));
+			String date1=Date.getText();
 			Date.click();
-//			System.out.println("clicked on "+ Date.getText());
-			System.out.println("clicked on Date");
+			System.out.println("clicked on "+date1);
+//			System.out.println("clicked on Date");
 		}catch (Exception e) {
 			System.out.println("Not able to click on date");
 		}
@@ -114,8 +116,9 @@ public class ApplyForLeaveScreen extends BaseClass{
 	}
 	public void clickOnEmergencyTab() {
 		try {
+			String tab=emergencyTab.getText();
 			emergencyTab.click();
-			System.out.println("Click on emergency tab");
+			System.out.println("Click on "+tab+" tab");
 		}catch (Exception e) {
 			System.out.println("Not able to click on emergency tab");
 		}
@@ -130,8 +133,9 @@ public class ApplyForLeaveScreen extends BaseClass{
 	}
 	public void clickOnSaveButton() {
 		try {
+			String button=saveButton.getText();
 			saveButton.click();
-			System.out.println("Clicked on save button");
+			System.out.println("Clicked on "+button+" button");
 		}catch (Exception e) {
 			System.out.println("Not able to click on save button");
 		}
@@ -154,8 +158,9 @@ public class ApplyForLeaveScreen extends BaseClass{
 	}
 	public void clickOnApplyButton() {
 		try {
+			String button=applyButton.getText();
 			applyButton.click();
-			System.out.println("Clicked on Apply button");
+			System.out.println("Clicked on "+button+" Button");
 		}catch (Exception e) {
 			System.out.println("Not able to click on Apply button");
 		}
@@ -171,16 +176,18 @@ public class ApplyForLeaveScreen extends BaseClass{
 	
 	public void clickOnSickTab() {
 		try {
+			String tab=sickTab.getText();
 			sickTab.click();
-			System.out.println("Clicked on Sick Tab");
+			System.out.println("Clicked on "+tab+" tab");
 		}catch (Exception e) {
 			System.out.println("Not able to click on sickTab");
 		}
 	}
 	public void clickOnPlannedLeaveTab() {
 		try {
+			String tab=plannedLeaveTab.getText();
 			plannedLeaveTab.click();
-			System.out.println("Clicked on plannedLeave Tab");
+			System.out.println("Clicked on "+tab+" tab");
 		}catch (Exception e) {
 			System.out.println("Not able to click on plannedLeave Tab");
 		}

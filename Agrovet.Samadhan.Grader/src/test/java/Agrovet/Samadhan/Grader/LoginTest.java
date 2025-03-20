@@ -34,6 +34,7 @@ public class LoginTest extends BaseClass{
 		hamburgerScreen.clickOnlogoutTab();
 		logoutScreen.clickOnYesButton();
 		loginScreen.verifyWelcomeMessage();
+		System.out.println("===================Method Ends=====================");
 		
 	}
 	
@@ -47,6 +48,7 @@ public class LoginTest extends BaseClass{
 		driverUtility.threadWait(2);
 		loginScreen.clickOnSendOtpButton();
 		loginScreen.verifyMobileNumberErrorMessage();
+		System.out.println("===================Method Ends=====================");
 	}
 	
 	@Test(priority = 2)
@@ -67,17 +69,19 @@ public class LoginTest extends BaseClass{
 		otpScreen.sendKeyToThirdOtpTextBox(thirdDigit);
 		otpScreen.clickOnLoginButton();
 		otpScreen.verifyOtpErrorMessage();
+		System.out.println("===================Method Ends=====================");
 	}
 	
 	@Test(priority = 3)
 	public void verifyUserAbleToLoginWithInvalidCcCode() {
-		System.out.println("Use Invalid CC Code");
+		
 		String mobileNumber=excelUtility.readDataFromExcel("TestData", 0, 1);
 		String firstDigit=excelUtility.readDataFromExcel("TestData", 1, 1);
 		String secondDigit=excelUtility.readDataFromExcel("TestData", 2, 1);
 		String thirdDigit=excelUtility.readDataFromExcel("TestData", 3, 1);
 		String forthDigit=excelUtility.readDataFromExcel("TestData", 4, 1);
 		driverUtility.implicitlyWait(10);
+		System.out.println("Use Invalid CC Code");
 		loginScreen.ClickOnSelectRoleTextField();
 		loginScreen.ClickOnGrader();
 		loginScreen.clickAndSendKeyToMobileNumberTextField(mobileNumber);
@@ -90,6 +94,7 @@ public class LoginTest extends BaseClass{
 		otpScreen.sendKeyToForthOtpTextBox(forthDigit);
 		otpScreen.clickOnLoginButton();
 		otpScreen.verifyOkayMessage();
+		System.out.println("===================Method Ends=====================");
 	}
 	
 	@Test(priority = 4)
@@ -103,16 +108,18 @@ public class LoginTest extends BaseClass{
 		loginScreen.clickOnSendOtpButton();
 		loginScreen.verifyInternetErrorMessage();
 		driverUtility.turnOnWifi();
+		System.out.println("===================Method Ends=====================");
 		
 	}
 	@Test(priority = 5)
 	public void verifyUserAbleToLoginWhenNearToCcCenter() {
-		String mobileNumber="9354029690";
-		String firstDigit="1";
-		String secondDigit="2";
-		String thirdDigit="1";
-		String forthDigit="1";
+		String mobileNumber=excelUtility.readDataFromExcel("TestData", 0, 1);
+		String firstDigit=excelUtility.readDataFromExcel("TestData", 1, 1);
+		String secondDigit=excelUtility.readDataFromExcel("TestData", 2, 1);
+		String thirdDigit=excelUtility.readDataFromExcel("TestData", 3, 1);
+		String forthDigit=excelUtility.readDataFromExcel("TestData", 4, 1);
 		driverUtility.implicitlyWait(10);
+		System.out.println("Near to cc Code");
 		loginScreen.ClickOnSelectRoleTextField();
 		loginScreen.ClickOnGrader();
 		loginScreen.clickAndSendKeyToMobileNumberTextField(mobileNumber);
@@ -131,18 +138,20 @@ public class LoginTest extends BaseClass{
 		hamburgerScreen.clickOnlogoutTab();
 		logoutScreen.clickOnYesButton();
 		loginScreen.verifyWelcomeMessage();
+		System.out.println("===================Method Ends=====================");
 		
 	}
 	
 	@Test(priority = 6)
 	public void verifyUserAbleToLoginWhenFarFromCcCenter() {
 		System.out.println("Use cc code = 5578");
-		String mobileNumber="9354029690";
-		String firstDigit="1";
-		String secondDigit="2";
-		String thirdDigit="1";
-		String forthDigit="1";
+		String mobileNumber=excelUtility.readDataFromExcel("TestData", 0, 1);
+		String firstDigit=excelUtility.readDataFromExcel("TestData", 1, 1);
+		String secondDigit=excelUtility.readDataFromExcel("TestData", 2, 1);
+		String thirdDigit=excelUtility.readDataFromExcel("TestData", 3, 1);
+		String forthDigit=excelUtility.readDataFromExcel("TestData", 4, 1);
 		driverUtility.implicitlyWait(10);
+		System.out.println("Far from CC Code");
 		loginScreen.ClickOnSelectRoleTextField();
 		loginScreen.ClickOnGrader();
 		loginScreen.clickAndSendKeyToMobileNumberTextField(mobileNumber);
@@ -155,5 +164,6 @@ public class LoginTest extends BaseClass{
 		otpScreen.sendKeyToForthOtpTextBox(forthDigit);
 		otpScreen.clickOnLoginButton();
 		otpScreen.verifyCcErrorMessage();
+		System.out.println("===================Method Ends=====================");
 	}
 }

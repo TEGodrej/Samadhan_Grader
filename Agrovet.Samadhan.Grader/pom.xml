@@ -61,8 +61,18 @@
             <artifactId>json</artifactId>
             <version>20210307</version>
         </dependency>
-        
-        
 
+
+
+        <dependency>
+        	<groupId>io.gavl.SankalpWeb</groupId>
+        	<artifactId>io.gavl.SankalpWeb</artifactId>
+        	<version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+        	<groupId>Agrovet.Samadhan.Operator</groupId>
+        	<artifactId>Agrovet.Samadhan.Operator</artifactId>
+        	<version>0.0.1-SNAPSHOT</version>
+        </dependency>
   </dependencies>
 </project>
