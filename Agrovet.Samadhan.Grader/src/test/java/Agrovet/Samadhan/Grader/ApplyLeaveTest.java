@@ -31,7 +31,7 @@ public class ApplyLeaveTest extends BaseClass{
 	
 	@Test(priority = 1)
 	public void verifyUserAbleToApplySickLeave() {
-		String message="Fever";
+		String message=excelUtility.readDataFromExcel("TestData", 5, 1);
 		driverUtility.implicitlyWait(10);
 		homeScreen.clickOnHamburgerTab();
 		hamburgerScreen.clickOnAttendanceTab();
@@ -51,7 +51,7 @@ public class ApplyLeaveTest extends BaseClass{
 	
 	@Test(priority = 2)
 	public void verifyUserAbleToApplyPlannedLeave() {
-		String message="I will not be for 2 days";
+		String message=excelUtility.readDataFromExcel("TestData", 5, 1);
 		driverUtility.implicitlyWait(10);
 		homeScreen.clickOnHamburgerTab();
 		hamburgerScreen.clickOnAttendanceTab();
@@ -71,7 +71,7 @@ public class ApplyLeaveTest extends BaseClass{
 	
 	@Test(priority = 3)
 	public void verifyUserShouldNotBeAbleToApplyLeaveWithoutSelectingLeaveType() {
-		String message="I will not be available for 2 days";
+		String message=excelUtility.readDataFromExcel("TestData", 5, 1);
 		driverUtility.implicitlyWait(10);
 		homeScreen.clickOnHamburgerTab();
 		hamburgerScreen.clickOnAttendanceTab();
@@ -89,7 +89,7 @@ public class ApplyLeaveTest extends BaseClass{
 	
 	@Test(priority = 4)
 	public void verifyUserShouldNotBeAbleToApplyLeaveWithoutSelectingToDate() {
-		String message="emergency";
+		String message=excelUtility.readDataFromExcel("TestData", 5, 1);
 		driverUtility.implicitlyWait(10);
 		homeScreen.clickOnHamburgerTab();
 		hamburgerScreen.clickOnAttendanceTab();
@@ -106,7 +106,7 @@ public class ApplyLeaveTest extends BaseClass{
 	
 	@Test(priority = 5)
 	public void verifyUserShouldNotBeAbleToApplyLeaveWithoutSelectingFromDate() {
-		String message="emergency";
+		String message=excelUtility.readDataFromExcel("TestData", 5, 1);
 		driverUtility.implicitlyWait(10);
 		homeScreen.clickOnHamburgerTab();
 		hamburgerScreen.clickOnAttendanceTab();
