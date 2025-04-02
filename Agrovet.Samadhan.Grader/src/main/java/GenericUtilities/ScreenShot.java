@@ -12,9 +12,14 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
-
+/**
+ *@author DivyaPrakashAmar
+ */
 public class ScreenShot extends BaseClass{
-
+	
+	/**
+	 *This method is use to take screenshot 
+	 */
 	public static void getScreenShot() {
 		TakesScreenshot ss = (TakesScreenshot) staticdriver;
         File source = ss.getScreenshotAs(OutputType.FILE);
@@ -32,7 +37,9 @@ public class ScreenShot extends BaseClass{
         }
 	}
 	
-	// Image comparison method
+	/**
+	 *This method is use to compare  screenshots 
+	 */
     public static boolean compareImages(String image1Path, String image2Path) {
         try {
             // Load both images

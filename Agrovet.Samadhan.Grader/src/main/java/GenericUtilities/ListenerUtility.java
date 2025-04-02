@@ -8,8 +8,15 @@ import org.openqa.selenium.TakesScreenshot;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
+/**
+ *@author DivyaPrakashAmar
+ */
 public class ListenerUtility implements ITestListener {
 	
+	/**
+	 *This method is use to caputer screen shot when method fails
+	 *@param ITestResult result
+	 */
 	@Override
 	public void onTestFailure(ITestResult result) {
 		String failed = result.getMethod().getMethodName();
@@ -23,6 +30,11 @@ public class ListenerUtility implements ITestListener {
 			e.printStackTrace();
 		}
 	}
+	
+	/**
+	 *This method is use to caputer screen shot when method skips
+	 *@param ITestResult result
+	 */
 	
 	@Override
 	public void onTestSkipped(ITestResult result) {

@@ -8,6 +8,11 @@ import org.openqa.selenium.support.PageFactory;
 
 import io.appium.java_client.android.AndroidDriver;
 
+/**
+ * This class contains elements of "AttendanceScreen" and also contains reusable methods for the elements
+ * It also contains some assertions methods
+ *@author DivyaPrakashAmar
+ */
 public class AttendanceScreen {
 	
 	AndroidDriver driver;

@@ -6,6 +6,12 @@ import org.openqa.selenium.support.PageFactory;
 
 import io.appium.java_client.android.AndroidDriver;
 
+
+/**
+ *This class contains elements of "LogoutScreen" and also contains reusable methods for the elements
+ *It also contains some assertions methods
+ *@author DivyaPrakashAmar
+ */
 public class LogoutScreen {
 	
 	AndroidDriver driver;
@@ -20,6 +26,9 @@ public class LogoutScreen {
 	@FindBy(xpath = "//android.widget.Button[@content-desc='No']")
 	private WebElement noButton;
 	
+	/**
+	 *This method is use to click On YesButton
+	 */
 	public void clickOnYesButton() {
 		try {
 			String button=yesButton.getText();
@@ -29,7 +38,9 @@ public class LogoutScreen {
 			System.out.println("Not able to click on Yes Button");
 		}
 	}
-	
+	/**
+	 *This method is use to click On NoButton
+	 */
 	public void clickOnNoButton() {
 		try {
 			String button=noButton.getText();

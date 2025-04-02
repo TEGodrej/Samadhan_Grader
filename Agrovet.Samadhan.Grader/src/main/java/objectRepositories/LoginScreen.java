@@ -9,6 +9,12 @@ import org.openqa.selenium.support.PageFactory;
 import GenericUtilities.BaseClass;
 import io.appium.java_client.android.AndroidDriver;
 
+
+/**
+ *This class contains elements of "LoginScreen" and also contains reusable methods for the elements
+ *It also contains some assertions methods
+ *@author DivyaPrakashAmar
+ */
 public class LoginScreen extends BaseClass{
 	
 	AndroidDriver driver;
@@ -49,6 +55,9 @@ public class LoginScreen extends BaseClass{
 	@FindBy(xpath = "//android.widget.TextView[@text='Welcome to Samadhan, your one-stop solution for all your needs. Please log in to continue.']")
 	private WebElement welcomeMessage;
 	
+	/**
+	 *This method is use to Click On SelectRole TextField
+	 */
 	public void ClickOnSelectRoleTextField() {
 		try {
 			String roleTextField=selectRoleTextField.getText();
@@ -58,7 +67,9 @@ public class LoginScreen extends BaseClass{
 			System.out.println("Not able to click on select role text field");
 		}
 	}
-	
+	/**
+	 *This method is use to Click On Grader
+	 */
 	public void ClickOnGrader() {
 		try {
 			String role=grader.getText();
@@ -68,7 +79,9 @@ public class LoginScreen extends BaseClass{
 			System.out.println("Not able to click on grader");
 		}
 	}
-	
+	/**
+	 *This method is use to click And SendKey To MobileNumberTextField
+	 */
 	public void clickAndSendKeyToMobileNumberTextField(String key) {
 		try {
 			mobileNumberTextField.click();
@@ -79,7 +92,9 @@ public class LoginScreen extends BaseClass{
 			System.out.println("Not Able To Perform Action On Mobile Number TextField");
 		}
 	}
-	
+	/**
+	 *This method is use to click On SendOtp Button
+	 */
 	public void clickOnSendOtpButton() {
 		try {
 			driverUtility.explicitWait(2, sendOtpButton);
@@ -90,7 +105,9 @@ public class LoginScreen extends BaseClass{
 			System.out.println("Not able to click on send OTP Button");
 		}
 	}
-	
+	/**
+	 *This method is use to verify MobileNumber Error Message
+	 */
 	public void verifyMobileNumberErrorMessage() {
 		try {
 			assertTrue(mobileNumberErrorMessage.isDisplayed());
@@ -99,7 +116,9 @@ public class LoginScreen extends BaseClass{
 			System.out.println("mobile number error message is not displayed");
 		}
 	}
-	
+	/**
+	 *This method is use to verify Internet Error Message
+	 */
 	public void verifyInternetErrorMessage() {
 		try {
 			assertTrue(internetErrorMessage.isDisplayed());
@@ -108,7 +127,9 @@ public class LoginScreen extends BaseClass{
 			System.out.println("internet error message is not displayed");
 		}
 	}
-	
+	/**
+	 *This method is use to verify Welcome Message
+	 */
 	public void verifyWelcomeMessage() {
 		try {
 			assertTrue(welcomeMessage.isDisplayed());

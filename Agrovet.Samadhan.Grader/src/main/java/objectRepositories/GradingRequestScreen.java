@@ -6,6 +6,11 @@ import org.openqa.selenium.support.PageFactory;
 
 import io.appium.java_client.android.AndroidDriver;
 
+/**
+ *This class contains elements of "GradingRequestScreen" and also contains reusable methods for the elements
+ *It also contains some assertions methods
+ *@author DivyaPrakashAmar
+ */
 public class GradingRequestScreen {
 	
 	AndroidDriver driver;
@@ -33,6 +38,9 @@ public class GradingRequestScreen {
 	@FindBy(xpath = "//android.view.ViewGroup[@resource-id=\"card-container\"]")
 	private WebElement transactionId;
 	
+	/**
+	 *This method is use to click On TransactionId
+	 */
 	public void clickOnTransactionId() {
 		try {
 			transactionId.click();
@@ -41,7 +49,9 @@ public class GradingRequestScreen {
 			System.out.println("Not able to click on transactionId");
 		}
 	}
-	
+	/**
+	 *This method is use to click On RefreshButton
+	 */
 	public void clickOnRefreshButton() {
 		try {
 			refreshButton.click();
@@ -50,7 +60,9 @@ public class GradingRequestScreen {
 			System.out.println("Not able to click on refresh button");
 		}
 	}
-	
+	/**
+	 *This method is use to click On SortBy Button
+	 */
 	public void clickOnSortByButton() {
 		try {
 			sortByButton.click();
@@ -59,7 +71,9 @@ public class GradingRequestScreen {
 			System.out.println("Not able to click on sortBy Button");
 		}
 	}
-	
+	/**
+	 *This method is use to click On FilterBy Button
+	 */
 	public void clickOnFilterByButton() {
 		try {
 			filterByButton.click();

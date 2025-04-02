@@ -8,6 +8,11 @@ import org.openqa.selenium.support.PageFactory;
 
 import io.appium.java_client.android.AndroidDriver;
 
+/**
+ *This class contains elements of "ProfileScreen" and also contains reusable methods for the elements
+ *It also contains some assertions methods
+ *@author DivyaPrakashAmar
+ */
 public class ProfileScreen {
 	
 	AndroidDriver driver;
@@ -22,18 +27,21 @@ public class ProfileScreen {
 	@FindBy(xpath = "//android.widget.TextView[@text='testing.engineer@godrejagrovet.com']")
 	private WebElement userMailId;
 	
-	@FindBy(xpath = "//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ImageView")
+	@FindBy(xpath = "//android.widget.FrameLayout[@resource-id='android:id/content']/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ImageView")
 	private WebElement profilePicture;
 	
-	@FindBy(xpath = "//android.widget.TextView[@resource-id=\"button-text\" and @text=\"Gallery\"]")
+	@FindBy(xpath = "//android.widget.TextView[@resource-id='button-text' and @text='Gallery']")
 	private WebElement galleryButton;
 	
-	@FindBy(xpath = "//android.widget.TextView[@resource-id=\"button-text\" and @text=\"Camera\"]")
+	@FindBy(xpath = "//android.widget.TextView[@resource-id='button-text' and @text='Camera']")
 	private WebElement cameraButton;
 	
-	@FindBy(xpath = "(//android.widget.ImageView[@resource-id=\"com.google.android.providers.media.module:id/icon_thumbnail\"])[4]")
+	@FindBy(xpath = "(//android.widget.ImageView[@resource-id='com.google.android.providers.media.module:id/icon_thumbnail'])[4]")
 	private WebElement picture;
 	
+	/**
+	 *This method is use to verify user name
+	 */
 	public void verifyUserName() {
 		try {
 			assertTrue(userName.isDisplayed());
@@ -42,6 +50,9 @@ public class ProfileScreen {
 		}
 	}
 	
+	/**
+	 *This method is use to click On Profile Picture
+	 */
 	public void clickOnProfilePicture() {
 		try {
 			String button=profilePicture.getText();
@@ -52,6 +63,9 @@ public class ProfileScreen {
 		}
 	}
 	
+	/**
+	 *This method is use to click On Gallery Button
+	 */
 	public void clickOnGalleryButton() {
 		try {
 			String button=galleryButton.getText();
@@ -62,6 +76,9 @@ public class ProfileScreen {
 		}
 	}
 	
+	/**
+	 *This method is use to click On Camera Button
+	 */
 	public void clickOnCameraButton() {
 		try {
 			String button=cameraButton.getText();
@@ -72,6 +89,9 @@ public class ProfileScreen {
 		}
 	}
 	
+	/**
+	 *This method is use to click On Picture
+	 */
 	public void clickOnPicture() {
 		try {
 			picture.click();

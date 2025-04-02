@@ -6,9 +6,15 @@ import org.testng.annotations.Test;
 
 import GenericUtilities.BaseClass;
 
+/**
+ *@author DivyaPrakashAmar
+ */
 @Listeners(GenericUtilities.ExtentReportsListner.class)
 public class RequestTest extends BaseClass{
 	
+	/**
+	 *This method is use to verify wheather use is able to send requested transactionID for grading 
+	 */
 	@Test(priority = 0)
 	public void verifyUserAbleToSendRequestedTransactionIdForGrading(){
 		String smallBunches=excelUtility.readDataFromExcel("TestData", 9, 1);
@@ -38,6 +44,9 @@ public class RequestTest extends BaseClass{
 		enterGradingDetailsScreen.clickOnOkayButton();
 	}
 	
+	/**
+	 *This method is use to verify wheather use is able to refresh the screen
+	 */
 	@Test(priority = 1)
 	public void verifyUserShouldBeAbleToRefresh() {
 		driverUtility.implicitlyWait(15);
@@ -45,6 +54,9 @@ public class RequestTest extends BaseClass{
 		gradingRequestScreen.clickOnRefreshButton();
 	}
 	
+	/**
+	 *This method is use to verify wheather use is able to sort transactions by "OldestFirst" sort option
+	 */
 	@Test(priority = 2)
 	public void verifyUserShouldBeAbleToSortByOldestFirst() {
 		driverUtility.implicitlyWait(15);
@@ -55,6 +67,9 @@ public class RequestTest extends BaseClass{
 		
 	}
 	
+	/**
+	 *This method is use to verify wheather use is able to sort transactions by "RecentFirst" sort option
+	 */
 	@Test(priority = 3)
 	public void verifyUserShouldBeAbleToSortByRecentFirst() {
 		driverUtility.implicitlyWait(15);
@@ -63,7 +78,9 @@ public class RequestTest extends BaseClass{
 		sortByScreen.clickOnRecentFirstRadioButton();
 		sortByScreen.clickOnApplyButton();
 	}
-	
+	/**
+	 *This method is use to verify wheather use is able to filter transactions by name option
+	 */
 	@Test(priority = 4)
 	public void verifyUserShouldBeAbleToFilterByName() {
 		driverUtility.implicitlyWait(15);
@@ -81,6 +98,9 @@ public class RequestTest extends BaseClass{
 
 	}
 	
+	/**
+	 *This method is use to verify wheather use is able to reset the filter option
+	 */
 	@Test(priority = 5)
 	public void verifyUserShouldBeAbleToResetFilterCondition() {
 		driverUtility.implicitlyWait(15);

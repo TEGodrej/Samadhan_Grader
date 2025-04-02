@@ -1,5 +1,6 @@
 package GenericUtilities;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URL;
@@ -9,6 +10,8 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.service.local.AppiumDriverLocalService;
+import io.appium.java_client.service.local.AppiumServiceBuilder;
 import objectRepositories.ApplyForLeaveScreen;
 import objectRepositories.AttendanceScreen;
 import objectRepositories.EnterGradingDetailsScreen;
@@ -50,47 +53,46 @@ public class BaseClass {
 	public static SchedularScreen schedularScreen;
 	public static LogoutScreen  logoutScreen;
 	public static ScreenShot screenshot;
+	public AppiumDriverLocalService service ;
 	
-//	@BeforeSuite
-//	public void connectToDB(String url, String username, String password)  {
-//		try {
-//			connection=DriverManager.getConnection(url, username, password);
-//		}
-//		catch(SQLException e) {
-//			e.printStackTrace();
-//		}
-//	}
-//		@BeforeClass
-//		private void PrintingStatement() {
-//			System.out.println("before class has been executed");
-//
-//		}
 		@BeforeMethod
 		public void startApp() throws IOException {
-			// Fetching data from property file
-//			String platformname=FileUtility.getDataFromProperty("platformName");
-//			String DeviceName=FileUtility.getDataFromProperty("DeviceName");
-//			String AutomationName=FileUtility.getDataFromProperty("uiautomator2");
-//			String udid=FileUtility.getDataFromProperty("UDID");
-//			String appactivty=FileUtility.getDataFromProperty("appActivity");
-//			String apppackage=FileUtility.getDataFromProperty("appPackage");
-//			String NoReset=FileUtility.getDataFromProperty("noReset");
-//			
-//			DesiredCapabilities desiredCapability=new DesiredCapabilities();
-//			desiredCapability.setCapability("platformName", platformname);
-//			desiredCapability.setCapability("deviceName", DeviceName);
-//			desiredCapability.setCapability("automationName", AutomationName);
-//			desiredCapability.setCapability("UDID", udid);
-//			desiredCapability.setCapability("noReset", NoReset);
-//			desiredCapability.setCapability("appActivity", appactivty);
-//			desiredCapability.setCapability("appPackage", apppackage);
+/*
+ * this is to start the appium server
+ */			
+			
+			
+				File file = new File(FileUtility.getDataFromProperty("mainJSPath"));
+			    service = new AppiumServiceBuilder().withAppiumJS(file).withIPAddress(FileUtility.getDataFromProperty("ipAddress")).usingPort(Integer.parseInt(FileUtility.getDataFromProperty("portNumber"))).build();
+				service.start();
+				
+/*         
+ * Fetching data from property file
+ * 
+ */			
+			String platformName=FileUtility.getDataFromProperty("platformName");
+			String DeviceName=FileUtility.getDataFromProperty("DeviceName");
+			String automationName=FileUtility.getDataFromProperty("automationName");
+			String udid=FileUtility.getDataFromProperty("UDID");
+			String appActivty=FileUtility.getDataFromProperty("appActivity");
+			String appPackage=FileUtility.getDataFromProperty("appPackage");
+			String noReset=FileUtility.getDataFromProperty("noReset");
 			
 			DesiredCapabilities desiredCapability=new DesiredCapabilities();
-			desiredCapability.setCapability("platformName", "android");
-			desiredCapability.setCapability("deviceName", "Redmi A2");
-			desiredCapability.setCapability("automationName", "Uiautomator2");
-			desiredCapability.setCapability("UDID", "WKAQCYCQKROVDE4L");
-			desiredCapability.setCapability("noReset", true);
+			desiredCapability.setCapability("platformName", platformName);
+			desiredCapability.setCapability("deviceName", DeviceName);
+			desiredCapability.setCapability("automationName", automationName);
+			desiredCapability.setCapability("UDID", udid);
+			desiredCapability.setCapability("noReset", noReset);
+			desiredCapability.setCapability("appActivity", appActivty);
+			desiredCapability.setCapability("appPackage", appPackage);
+			
+//			DesiredCapabilities desiredCapability=new DesiredCapabilities();
+//			desiredCapability.setCapability("platformName", "android");
+//			desiredCapability.setCapability("deviceName", "Redmi A2");
+//			desiredCapability.setCapability("automationName", "Uiautomator2");
+//			desiredCapability.setCapability("UDID", "WKAQCYCQKROVDE4L");
+//			desiredCapability.setCapability("noReset", true);
 			
 			
 			URL url= URI.create("http://localhost:4723").toURL();
@@ -125,6 +127,7 @@ public class BaseClass {
 		@AfterMethod
 		public void closeApp() throws IOException {
 			driver.terminateApp("com.gavl.oilpalm.fms");
+			service.stop();
 		}
 		
 	}

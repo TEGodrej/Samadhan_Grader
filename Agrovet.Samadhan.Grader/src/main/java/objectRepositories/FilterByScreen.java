@@ -9,6 +9,11 @@ import org.openqa.selenium.support.PageFactory;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 
+/**
+ * This class contains elements of "FilterByScreen" and also contains reusable methods for the elements
+ * It also contains some assertions methods
+ *@author DivyaPrakashAmar
+ */
 public class FilterByScreen {
 	
 	AndroidDriver driver;
@@ -44,18 +49,25 @@ public class FilterByScreen {
 	@FindBy(xpath = "//android.view.View[@text='Grading Requests']")
 	private WebElement pageTitle;
 	
+	/**
+	 *This method is used to select FormDate
+	 */
 	public void fromDate() {
 		String Date="17";
 		WebElement date = driver.findElement(AppiumBy.xpath("//android.view.ViewGroup[@content-desc='"+Date+"']"));
 		date.click();
 	}
-	
+	/**
+	 *This method is used to select ToDate
+	 */
 	public void toDate() {
 		String Date="18";
 		WebElement date = driver.findElement(AppiumBy.xpath("//android.view.ViewGroup[@content-desc='"+Date+"']"));
 		date.click();
 	}
-	
+	/**
+	 *This method is used to click On selectFarmerName TextField
+	 */
 	public void clickOnselectFarmerNameTextField() {
 		try {
 			selectFarmerNameTextField.click();
@@ -64,7 +76,9 @@ public class FilterByScreen {
 			System.out.println("Not able to click on selectFarmerNameTextField");
 		}
 	}
-	
+	/**
+	 *This method is used to click On FromDate Calender
+	 */
 	public void clickOnFromDateCalender() {
 		try {
 			fromDateCalender.click();
@@ -73,7 +87,9 @@ public class FilterByScreen {
 			System.out.println("Not able to click on fromDateCalender");
 		}
 	}
-	
+	/**
+	 *This method is used to click On ToDate Calender
+	 */
 	public void clickOnToDateCalender() {
 		try {
 			toDateCalender.click();
@@ -82,7 +98,9 @@ public class FilterByScreen {
 			System.out.println("Not able to click on toDateCalender");
 		}
 	}
-	
+	/**
+	 *This method is used to click On SaveButton
+	 */
 	public void clickOnSaveButton() {
 		try {
 			String button=saveButton.getText();
@@ -92,7 +110,9 @@ public class FilterByScreen {
 			System.out.println("Not able to click on saveButton");
 		}
 	}
-	
+	/**
+	 *This method is used to click On CloseButton
+	 */
 	public void clickOnCloseButton() {
 		try {
 			String button=closeButton.getText();
@@ -102,7 +122,9 @@ public class FilterByScreen {
 			System.out.println("Not able to click on closeButton");
 		}
 	}
-	
+	/**
+	 *This method is used to click On FarmerName
+	 */
 	public void clickOnFarmerName() {
 		try {
 			farmerName.click();
@@ -111,7 +133,9 @@ public class FilterByScreen {
 			System.out.println("Not able to click on farmerName");
 		}
 	}
-	
+	/**
+	 *This method is used to click On Apply Button
+	 */
 	public void clickOnApplyButton() {
 		try {
 			applyButton.click();
@@ -120,7 +144,9 @@ public class FilterByScreen {
 			System.out.println("Not able to click on applyButton");
 		}
 	}
-	
+	/**
+	 *This method is used to click On Reset Button
+	 */
 	public void clickOnResetButton() {
 		try {
 			resetButton.click();
@@ -129,7 +155,9 @@ public class FilterByScreen {
 			System.out.println("Not able to click on resetButton");
 		}
 	}
-	
+	/**
+	 *This method is used to verify PageTitle
+	 */
 	public void verifyPageTitle() {
 		try {
 			assertTrue(pageTitle.isDisplayed());

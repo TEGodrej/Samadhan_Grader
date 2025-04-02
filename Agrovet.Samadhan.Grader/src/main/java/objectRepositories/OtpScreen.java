@@ -9,6 +9,12 @@ import org.openqa.selenium.support.PageFactory;
 import GenericUtilities.BaseClass;
 import io.appium.java_client.android.AndroidDriver;
 
+
+/**
+ * This class contains elements of otpScreen and also contains reusable methods for the elements
+ * It also contains some assertions methods
+ *@author DivyaPrakashAmar
+ */
 public class OtpScreen extends BaseClass{
 	AndroidDriver driver;
 	
@@ -47,6 +53,10 @@ public class OtpScreen extends BaseClass{
 	@FindBy(xpath = "//android.widget.TextView[@text='CC is not within allowed distance!']")
 	private WebElement ccErrorMessage;
 	
+	/**
+	 *This method is use to sendKeys To FirstOtp TextBox
+	 *@param String Key
+	 */
 	public void sendKeysToFirstOtpTextBox(String Key) {
 		try {
 			firstOtpTextBox.sendKeys(Key);
@@ -55,6 +65,10 @@ public class OtpScreen extends BaseClass{
 		}
 	}
 	
+	/**
+	 *This method is use to sendKey To SecondOtp TextBox
+	 *@param String Key
+	 */
 	public void sendKeyToSecondOtpTextBox(String Key) {
 		try {
 			secondOtpTextBox.sendKeys(Key);
@@ -62,7 +76,10 @@ public class OtpScreen extends BaseClass{
 			System.out.println("Not able to send key to secondOtpTextBox");
 		}
 	}
-	
+	/**
+	 *This method is use to sendKey To ThirdOtp TextBox
+	 *@param String Key
+	 */
 	public void sendKeyToThirdOtpTextBox(String key) {
 		try {
 			thirdOtpTextBox.sendKeys(key);
@@ -70,7 +87,10 @@ public class OtpScreen extends BaseClass{
 			System.out.println("Not able to send key to thirdOtpTextBox");
 		}
 	}
-	
+	/**
+	 *This method is use to sendKey To ForthOtp TextBox
+	 *@param String Key
+	 */
 	public void sendKeyToForthOtpTextBox(String key) {
 		try {
 			forthOtpTextBox.sendKeys(key);
@@ -78,7 +98,9 @@ public class OtpScreen extends BaseClass{
 			System.out.println("Not able to send key to forthOtpTextBox");
 		}
 	}
-	
+	/**
+	 *This method is use to click On LoginButton
+	 */
 	public void clickOnLoginButton() {
 		try {
 			String button=loginButton.getText();
@@ -88,7 +110,9 @@ public class OtpScreen extends BaseClass{
 			System.out.println("Not able to click on " + loginButton.getText());
 		}
 	}
-	
+	/**
+	 *This method is use to click On OkayButton
+	 */
 	public void clickOnOkayButton() {
 		try {
 			String button=okayButton.getText(); 
@@ -98,7 +122,9 @@ public class OtpScreen extends BaseClass{
 			System.out.println("Not able to click on Okay Button" + okayButton.getText());
 		}
 	}
-	
+	/**
+	 *This method is use to verify Success Message
+	 */
 	public void verifySuccessMessage() {
 		try {
 			assertTrue(successMessage.isDisplayed());
@@ -108,7 +134,9 @@ public class OtpScreen extends BaseClass{
 			System.out.println("successMessage is not displayed");
 		}
 	}
-	
+	/**
+	 *This method is use to verify Otp Error Message
+	 */
 	public void verifyOtpErrorMessage() {
 		try {
 			assertTrue(otpErrorMessage.isDisplayed());
@@ -117,7 +145,9 @@ public class OtpScreen extends BaseClass{
 			System.out.println("OTP ErrorMessage is not displayed");
 		}
 	}
-	
+	/**
+	 *This method is use to verify Okay Message
+	 */
 	public void verifyOkayMessage() {
 		try {
 			assertTrue(!successMessage.isDisplayed());
@@ -125,7 +155,9 @@ public class OtpScreen extends BaseClass{
 			System.out.println("successMessage is not displayed");
 		}
 	}
-	
+	/**
+	 *This method is use to verify Cc Error Message
+	 */
 	public void verifyCcErrorMessage() {
 		try {
 			assertTrue(ccErrorMessage.isDisplayed());

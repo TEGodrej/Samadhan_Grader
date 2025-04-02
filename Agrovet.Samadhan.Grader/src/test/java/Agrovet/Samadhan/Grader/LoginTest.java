@@ -4,9 +4,15 @@ import org.testng.annotations.Test;
 
 import GenericUtilities.BaseClass;
 
+/**
+ *@author DivyaPrakashAmar
+ */
 @Listeners(GenericUtilities.ExtentReportsListner.class)
 public class LoginTest extends BaseClass{
-
+    
+	/**
+	 *This method is use to verify wheather user is able to Login with valid credential
+	 */
 	@Test(priority = 0)
 	public void verifyUserAbleToLoginWithValidCredential() {
 		String mobileNumber=excelUtility.readDataFromExcel("TestData", 0, 1);
@@ -38,6 +44,9 @@ public class LoginTest extends BaseClass{
 		
 	}
 	
+	/**
+	 *This method is use to verify wheather user is able to Login with invalid mobile number
+	 */
 	@Test(priority = 1)
 	public void verifyUserAbleToLoginWithInvalidMobileNumber() {
 		String mobileNumber=excelUtility.readDataFromExcel("TestData", 8, 1);
@@ -51,6 +60,9 @@ public class LoginTest extends BaseClass{
 		System.out.println("===================Method Ends=====================");
 	}
 	
+	/**
+	 *This method is use to verify wheather User is able to Login with invalid otp
+	 */
 	@Test(priority = 2)
 	public void verifyUserAbleToLoginWithInvalidOtp() {
 		String mobileNumber=excelUtility.readDataFromExcel("TestData", 0, 1);
@@ -72,6 +84,9 @@ public class LoginTest extends BaseClass{
 		System.out.println("===================Method Ends=====================");
 	}
 	
+	/**
+	 *This method is use to verify wheather User is able to Login with invalid CC code
+	 */
 	@Test(priority = 3)
 	public void verifyUserAbleToLoginWithInvalidCcCode() {
 		
@@ -97,6 +112,9 @@ public class LoginTest extends BaseClass{
 		System.out.println("===================Method Ends=====================");
 	}
 	
+	/**
+	 *This method is use to verify wheather User is able to Login without internet
+	 */
 	@Test(priority = 4)
 	public void verifyUserNotBeAbleToLoginWithoutInternet() {
 		String mobileNumber=excelUtility.readDataFromExcel("TestData", 0, 1);
@@ -111,6 +129,9 @@ public class LoginTest extends BaseClass{
 		System.out.println("===================Method Ends=====================");
 		
 	}
+	/**
+	 *This method is use to verify wheather User is able to Login without internet
+	 */
 	@Test(priority = 5)
 	public void verifyUserAbleToLoginWhenNearToCcCenter() {
 		String mobileNumber=excelUtility.readDataFromExcel("TestData", 0, 1);
@@ -142,6 +163,9 @@ public class LoginTest extends BaseClass{
 		
 	}
 	
+	/**
+	 *This method is use to verify wheather User is able to Login when far from CC center
+	 */
 	@Test(priority = 6)
 	public void verifyUserAbleToLoginWhenFarFromCcCenter() {
 		System.out.println("Use cc code = 5578");

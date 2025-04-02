@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-20T11:30:36 IST" name="Default suite" finished-at="2025-03-20T11:31:04 IST" duration-ms="27766">
+  <suite started-at="2025-04-02T10:25:30 IST" name="Default suite" finished-at="2025-04-02T10:26:10 IST" duration-ms="39662">
     <groups>
     </groups>
-    <test started-at="2025-03-20T11:30:36 IST" name="Default test" finished-at="2025-03-20T11:31:04 IST" duration-ms="27766">
-      <class name="Agrovet.Samadhan.Grader.ProfileTest">
-        <test-method is-config="true" signature="startApp()[pri:0, instance:Agrovet.Samadhan.Grader.ProfileTest@198b6731]" started-at="2025-03-20T11:30:37 IST" name="startApp" finished-at="2025-03-20T11:30:43 IST" duration-ms="6741" status="PASS">
+    <test started-at="2025-04-02T10:25:30 IST" name="Default test" finished-at="2025-04-02T10:26:10 IST" duration-ms="39662">
+      <class name="Agrovet.Samadhan.Grader.GradingRequestTest">
+        <test-method is-config="true" signature="startApp()[pri:0, instance:Agrovet.Samadhan.Grader.GradingRequestTest@3bf7ca37]" started-at="2025-04-02T10:25:30 IST" name="startApp" finished-at="2025-04-02T10:25:39 IST" duration-ms="8476" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startApp -->
-        <test-method signature="verifyUserAbleToUploadPictureFromGallery()[pri:1, instance:Agrovet.Samadhan.Grader.ProfileTest@198b6731]" started-at="2025-03-20T11:30:43 IST" name="verifyUserAbleToUploadPictureFromGallery" finished-at="2025-03-20T11:31:03 IST" duration-ms="20163" status="PASS">
+        <test-method signature="verifyUserAbleToSendRequestedTransactionIdForGrading()[pri:0, instance:Agrovet.Samadhan.Grader.GradingRequestTest@3bf7ca37]" started-at="2025-04-02T10:25:39 IST" name="verifyUserAbleToSendRequestedTransactionIdForGrading" finished-at="2025-04-02T10:26:09 IST" duration-ms="30419" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyUserAbleToUploadPictureFromGallery -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:Agrovet.Samadhan.Grader.ProfileTest@198b6731]" started-at="2025-03-20T11:31:03 IST" name="closeApp" finished-at="2025-03-20T11:31:04 IST" duration-ms="754" status="PASS">
+        </test-method> <!-- verifyUserAbleToSendRequestedTransactionIdForGrading -->
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:Agrovet.Samadhan.Grader.GradingRequestTest@3bf7ca37]" started-at="2025-04-02T10:26:09 IST" name="closeApp" finished-at="2025-04-02T10:26:10 IST" duration-ms="653" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->
-      </class> <!-- Agrovet.Samadhan.Grader.ProfileTest -->
+      </class> <!-- Agrovet.Samadhan.Grader.GradingRequestTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="Agrovet.Samadhan.Grader.GradingRequestTest"/>
+      <methods>
+      <include name="verifyUserAbleToSendRequestedTransactionIdForGradingWithoutEnteringSmallBunchDetails"/>
+      <include name="verifyUserAbleToSendRequestedTransactionIdForGradingWithoutEnteringBouquetBunchDetails"/>
+      <include name="verifyUserAbleToSendRequestedTransactionIdForGradingWithoutEnteringLooseFruitDetails"/>
+      <include name="verifyUserAbleToSendRequestedTransactionIdForGradingWithoutEnteringRottenBunchDetails"/>
+      <include name="verifyUserAbleToSendRequestedTransactionIdForGradingWithoutEnteringUnderRippenBunchDetails"/>
+      <include name="verifyUserAbleToSendRequestedTransactionIdForGradingWithoutEnteringUnrippennBunchDetails"/>
+      <include name="verifyUserAbleToSendRequestedTransactionIdForGradingWithoutEnteringDamagedBunchDetails"/>
+      <include name="verifyUserAbleToSendRequestedTransactionIdForGradingWithoutEnteringLongStalkBunchDetails"/>
+      <include name= "verifyUserAbleToSendRequestedTransactionIdForGradingWithoutEnteringComment"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

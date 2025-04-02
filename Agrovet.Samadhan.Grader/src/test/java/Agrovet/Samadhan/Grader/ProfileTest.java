@@ -15,16 +15,20 @@ import javax.imageio.ImageIO;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import GenericUtilities.BaseClass;
-import GenericUtilities.ScreenShot;
 
+/**
+ *@author DivyaPrakashAmar
+ */
 @Listeners(GenericUtilities.ExtentReportsListner.class)
 public class ProfileTest extends BaseClass{
-
+    
+	/**
+	 *This method is use to verify that wheather user is able to see all their personal details
+	 */
 	@Test(priority = 0)
 	public void verifyUserAbleToSeeAllPersonalDetails() {
 		driverUtility.implicitlyWait(10);
@@ -33,32 +37,34 @@ public class ProfileTest extends BaseClass{
 		profileScreen.verifyUserName();
 	}
 	
+	/**
+	 *This method is use to verify that wheather user is able to upload picture from gallery
+	 */
 	@Test(priority = 1)
 	public void verifyUserAbleToUploadPictureFromGallery() {
 		
-//		try {
+		try {
             driverUtility.implicitlyWait(10);
             homeScreen.clickOnHamburgerTab();
             driverUtility.threadWait(1);
             hamburgerScreen.clickOnUserProfile();
             driverUtility.threadWait(5);
-            ScreenShot.getScreenShot();
 
             // Capture first screenshot
-//            TakesScreenshot ss = (TakesScreenshot) staticdriver;
-//            File source = ss.getScreenshotAs(OutputType.FILE);
-//
-//            String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-//            String firstScreenshot = "Screenshot_" + timestamp + ".jpg";
-//            File destination = new File(firstScreenshot);
-//
-//            try {
-//                FileUtils.copyFile(source, destination);
-//                System.out.println("Screenshot saved to: " + firstScreenshot);
-//            } catch (IOException e) {
-//                System.out.println("Failed to take screenshot: " + e.getMessage());
-//                e.printStackTrace();
-//            }
+            TakesScreenshot ss = (TakesScreenshot) staticdriver;
+            File source = ss.getScreenshotAs(OutputType.FILE);
+
+            String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+            String firstScreenshot = "Screenshot_" + timestamp + ".jpg";
+            File destination = new File(firstScreenshot);
+
+            try {
+                FileUtils.copyFile(source, destination);
+                System.out.println("Screenshot saved to: " + firstScreenshot);
+            } catch (IOException e) {
+                System.out.println("Failed to take screenshot: " + e.getMessage());
+                e.printStackTrace();
+            }
 
             profileScreen.clickOnProfilePicture();
             driverUtility.threadWait(1);
@@ -66,61 +72,61 @@ public class ProfileTest extends BaseClass{
             driverUtility.threadWait(4);
             profileScreen.clickOnPicture();
             driverUtility.threadWait(10);
-            ScreenShot.getScreenShot();
-            screenshot.compareImages(null, null);
-//
-//            // Capture second screenshot
-//            TakesScreenshot screenShot = (TakesScreenshot) staticdriver;
-//            File source1 = screenShot.getScreenshotAs(OutputType.FILE);
-//
-//            String timestamp1 = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-//            String secondScreenshot = "Screenshot_" + timestamp1 + ".jpg";
-//            File destination2 = new File(secondScreenshot);
-//
-//            try {
-//                FileUtils.copyFile(source1, destination2);
-//                System.out.println("Screenshot saved to: " + secondScreenshot);
-//            } catch (IOException e) {
-//                System.out.println("Failed to take screenshot: " + e.getMessage());
-//                e.printStackTrace();
-//            }
 
-//        } 
-//		finally {
-//            System.out.println("Test completed.");
-//        }
+//            // Capture second screenshot
+            TakesScreenshot screenShot = (TakesScreenshot) staticdriver;
+            File source1 = screenShot.getScreenshotAs(OutputType.FILE);
+
+            String timestamp1 = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+            String secondScreenshot = "Screenshot_" + timestamp1 + ".jpg";
+            File destination2 = new File(secondScreenshot);
+
+            try {
+                FileUtils.copyFile(source1, destination2);
+                System.out.println("Screenshot saved to: " + secondScreenshot);
+            } catch (IOException e) {
+                System.out.println("Failed to take screenshot: " + e.getMessage());
+                e.printStackTrace();
+            }
+
+        } 
+		finally {
+            System.out.println("Test completed.");
+        }
     }
 
     // Image comparison method
-//    public static boolean compareImages(String image1Path, String image2Path) {
-//        try {
-//            // Load both images
-//            BufferedImage image1 = ImageIO.read(new File(image1Path));
-//            BufferedImage image2 = ImageIO.read(new File(image2Path));
-//
-//            // Check if images have the same size
-//            if (image1.getWidth() != image2.getWidth() || image1.getHeight() != image2.getHeight()) {
-//                return false; // Images have different dimensions
-//            }
-//
-//            // Compare each pixel in the two images
-//            for (int x = 0; x < image1.getWidth(); x++) {
-//                for (int y = 0; y < image1.getHeight(); y++) {
-//                    if (image1.getRGB(x, y) != image2.getRGB(x, y)) {
-//                        return false; // Pixel difference found
-//                    }
-//                }
-//            }
-//
-//            return true; // No differences found
-//        } catch (IOException e) {
-//            System.out.println("Error comparing images: " + e.getMessage());
-//            e.printStackTrace();
-//            return false; // Return false if an error occurs
-//        }
-//    }
+    public static boolean compareImages(String image1Path, String image2Path) {
+        try {
+            // Load both images
+            BufferedImage image1 = ImageIO.read(new File(image1Path));
+            BufferedImage image2 = ImageIO.read(new File(image2Path));
+
+            // Check if images have the same size
+            if (image1.getWidth() != image2.getWidth() || image1.getHeight() != image2.getHeight()) {
+                return false; // Images have different dimensions
+            }
+
+            // Compare each pixel in the two images
+            for (int x = 0; x < image1.getWidth(); x++) {
+                for (int y = 0; y < image1.getHeight(); y++) {
+                    if (image1.getRGB(x, y) != image2.getRGB(x, y)) {
+                        return false; // Pixel difference found
+                    }
+                }
+            }
+
+            return true; // No differences found
+        } catch (IOException e) {
+            System.out.println("Error comparing images: " + e.getMessage());
+            e.printStackTrace();
+            return false; // Return false if an error occurs
+        }
+    }
 		    
-    
+	/**
+	 *This method is use to verify that wheather user is able to upload picture from camera
+	 */
     @Test(priority = 2)
     public void verifyUserAbleToUploadPictureFromCamera() {
 		try {

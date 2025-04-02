@@ -10,12 +10,20 @@ import GenericUtilities.BaseClass;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 
+/**
+ *This class contains elements of "HistoryScreen" and also contains reusable methods for the elements
+ *It also contains some assertions methods
+ *@author DivyaPrakashAmar
+ */
 public class HistoryScreen extends BaseClass{
 	AndroidDriver driver;
 	public HistoryScreen(AndroidDriver driver) {
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
+	/**
+	 *This method is use to verify PresentDate
+	 */
 
 	public void verifyPresentDate() {
 		try {

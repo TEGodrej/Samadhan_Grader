@@ -6,6 +6,12 @@ import org.openqa.selenium.support.PageFactory;
 
 import io.appium.java_client.android.AndroidDriver;
 
+
+/**
+ *This class contains elements of "HamburgerScreen" and also contains reusable methods for the elements
+ *It also contains some assertions methods
+ *@author DivyaPrakashAmar
+ */
 public class HamburgerScreen {
 	
 	AndroidDriver driver;
@@ -35,6 +41,9 @@ public class HamburgerScreen {
 	@FindBy(xpath = "//android.view.ViewGroup[@content-desc='Logout']")
 	private WebElement logoutTab;
 	
+	/**
+	 *This method is use to click On UserProfile
+	 */
 	public void clickOnUserProfile() {
 		try {
 			userProfile.click();
@@ -43,7 +52,9 @@ public class HamburgerScreen {
 			System.out.println("Not able to click on user profile");
 		}
 	}
-	
+	/**
+	 *This method is use to click On AttendanceTab
+	 */
 	public void clickOnAttendanceTab() {
 		try {
 			attendanceTab.click();
@@ -53,6 +64,9 @@ public class HamburgerScreen {
 		}
 	}
 	
+	/**
+	 *This method is use to click On SchedulerTab
+	 */
 	public void clickOnSchedulerTab() {
 		try {
 			schedulerTab.click();
@@ -61,7 +75,9 @@ public class HamburgerScreen {
 			System.out.println("Not able to click on SchedulerTab");
 		}
 	}
-	
+	/**
+	 *This method is use to click On logoutTab
+	 */
 	public void clickOnlogoutTab() {
 		try {
 			String button=logoutTab.getText();

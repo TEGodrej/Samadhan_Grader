@@ -8,6 +8,12 @@ import org.openqa.selenium.support.PageFactory;
 
 import io.appium.java_client.android.AndroidDriver;
 
+
+/**
+ *This class contains elements of "SchedularScreen" and also contains reusable methods for the elements
+ *It also contains some assertions methods
+ *@author DivyaPrakashAmar
+ */
 public class SchedularScreen {
 	
 	AndroidDriver driver;
@@ -22,6 +28,9 @@ public class SchedularScreen {
 	@FindBy(xpath = "//android.view.View[@text='Schedular']")
 	private WebElement pageTitle;
 	
+	/**
+	 *This method is use to verify scheduler message
+	 */
 	public void verifyScheduleMessage() {
 		try {
 			assertTrue(scheduleMessage.isDisplayed());

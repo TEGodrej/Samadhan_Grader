@@ -6,6 +6,12 @@ import org.openqa.selenium.support.PageFactory;
 
 import io.appium.java_client.android.AndroidDriver;
 
+
+/**
+ *This class contains elements of "SortByScreen" and also contains reusable methods for the elements
+ *It also contains some assertions methods
+ *@author DivyaPrakashAmar
+ */
 public class SortByScreen {
 	
 	AndroidDriver driver;
@@ -26,6 +32,9 @@ public class SortByScreen {
 	@FindBy(xpath = "//android.widget.Button[@content-desc='Apply']")
 	private WebElement applyButton;
 	
+	/**
+	 *This method is use to click on OldestFirst Radio Button
+	 */
 	public void clickOnOldestFirstRadioButton() {
 		try {
 			oldestFirstRadioButton.click();
@@ -35,6 +44,9 @@ public class SortByScreen {
 		}
 	}
 	
+	/**
+	 *This method is use to click on RecentFirst Radio Button
+	 */
 	public void clickOnRecentFirstRadioButton() {
 		try {
 			recentFirstRadioButton.click();
@@ -44,6 +56,9 @@ public class SortByScreen {
 		}
 	}
 	
+	/**
+	 *This method is use to click on CancelButton
+	 */
 	public void clickOnCancelButton() {
 		try {
 			cancelButton.click();
@@ -53,6 +68,9 @@ public class SortByScreen {
 		}
 	}
 	
+	/**
+	 *This method is use to click on ApplyButton
+	 */
 	public void clickOnApplyButton() {
 		try {
 			applyButton.click();

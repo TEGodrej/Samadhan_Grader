@@ -8,6 +8,11 @@ import org.openqa.selenium.support.PageFactory;
 
 import io.appium.java_client.android.AndroidDriver;
 
+/**
+ * This class contains elements of "EnterGradingDetailsScreen" and also contains reusable methods for the elements
+ * It also contains some assertions methods
+ *@author DivyaPrakashAmar
+ */
 public class EnterGradingDetailsScreen {
 	
 	AndroidDriver driver;
@@ -64,7 +69,10 @@ public class EnterGradingDetailsScreen {
 	@FindBy(xpath = "//android.widget.TextView[@text='Please enter valid numbers']")
 	private WebElement errorMessage;
 	
-	
+	/**
+	 *This method is used to sendkeys To SmallBunches TextField
+	 *@param String key
+	 */
 	public void sendkeyToSmallBunchesTextField(String key) {
 		try {
 			smallBunchesTextField.sendKeys(key);
@@ -73,7 +81,10 @@ public class EnterGradingDetailsScreen {
 			System.out.println("Not able to enter value in small Bunches TextField");
 		}
 	}
-	
+	/**
+	 *This method is used to sendkey To BouquetBunches TextField
+	 *@param String key
+	 */
 	public void sendkeyToBouquetBunchesTextField(String key) {
 		try {
 			bouquetBunchesTextField.sendKeys(key);
@@ -82,7 +93,10 @@ public class EnterGradingDetailsScreen {
 			System.out.println("Not able to enter value in bouquet Bunches TextField");
 		}
 	}
-	
+	/**
+	 *This method is used to sendkey To LooseFruit TextField
+	 *@param String key
+	 */
 	public void sendkeyToLooseFruitTextField(String key) {
 		try {
 			looseFruitTextField.sendKeys(key);
@@ -91,7 +105,10 @@ public class EnterGradingDetailsScreen {
 			System.out.println("Not able to enter value in loose Fruit TextField");
 		}
 	}
-	
+	/**
+	 *This method is used to sendkey To RottenBunches TextField
+	 *@param String key
+	 */
 	public void sendkeyToRottenBunchesTextField(String key) {
 		try {
 			rottenBunchesTextField.sendKeys(key);
@@ -100,7 +117,10 @@ public class EnterGradingDetailsScreen {
 			System.out.println("Not able to enter value in rotten Bunches TextField");
 		}
 	}
-	
+	/**
+	 *This method is used to sendkey To UnderRippenBunches TextField
+	 *@param String key
+	 */
 	public void sendkeyToUnderRippenBunchesTextField(String key) {
 		try {
 			underRippenBunchesTextField.sendKeys(key);
@@ -109,7 +129,10 @@ public class EnterGradingDetailsScreen {
 			System.out.println("Not able to enter value in underRippen Bunches TextField");
 		}
 	}
-	
+	/**
+	 *This method is used to sendkey To DamagedBunches TextField
+	 *@param String key
+	 */
 	public void sendkeyToDamagedBunchesTextField(String key) {
 		try {
 			damagedBunchesTextField.sendKeys(key);
@@ -118,7 +141,10 @@ public class EnterGradingDetailsScreen {
 			System.out.println("Not able to enter value in damaged Bunches TextField");
 		}
 	}
-	
+	/**
+	 *This method is used to sendkey To LongStalkBunches TextField
+	 *@param String key
+	 */
 	public void sendkeyToLongStalkBunchesTextField(String key) {
 		try {
 			longStalkBunchesTextField.sendKeys(key);
@@ -127,7 +153,10 @@ public class EnterGradingDetailsScreen {
 			System.out.println("Not able to enter value in longStalk Bunches TextField");
 		}
 	}
-	
+	/**
+	 *This method is used to sendkey To CommentBox TextField
+	 *@param String key
+	 */
 	public void sendkeyToCommentBoxTextField(String key) {
 		try {
 			commentBoxTextField.sendKeys(key);
@@ -136,7 +165,9 @@ public class EnterGradingDetailsScreen {
 			System.out.println("Not able to enter value in commentBox TextField");
 		}
 	}
-	
+	/**
+	 *This method is used to click On SubmitButton
+	 */
 	public void clickOnSubmitButton() {
 		try {
 			String tab=submitButton.getText();
@@ -146,6 +177,10 @@ public class EnterGradingDetailsScreen {
 			System.out.println("Not able to click on submitButton");
 		}
 	}
+	/**
+	 *This method is used to sendkeyToUnrippenBunchesTextField
+	 *@param String key
+	 */
 	public void sendkeyToUnrippenBunchesTextField(String key) {
 		try {
 			unrippenBunchesTextField.sendKeys(key);
@@ -154,7 +189,9 @@ public class EnterGradingDetailsScreen {
 			System.out.println("Not able to enter value in unrippenBunches TextField");
 		}
 	}
-	
+	/**
+	 *This method is used to click On OkayButton
+	 */
 	public void clickOnOkayButton() {
 		try {
 			String tab=okayButton.getText();
@@ -164,7 +201,9 @@ public class EnterGradingDetailsScreen {
 			System.out.println("Not able to click on okay button");
 		}
 	}
-	
+	/**
+	 *This method is used to verify SuccessfullMessage
+	 */
 	public void verifySuccessfullMessage() {
 		try {
 			assertTrue(successfullMessage.isDisplayed());
@@ -173,7 +212,9 @@ public class EnterGradingDetailsScreen {
 			System.out.println("successfull Message is not displayed");
 		}
 	}
-	
+	/**
+	 *This method is used to verify  ErrorMeassge
+	 */
 	public void verifyErrorMeassge() {
 		try {
 			assertTrue(errorMessage.isDisplayed());

@@ -8,6 +8,11 @@ import org.openqa.selenium.support.PageFactory;
 
 import io.appium.java_client.android.AndroidDriver;
 
+/**
+ *This class contains elements of "HomeScreen" and also contains reusable methods for the elements
+ *It also contains some assertions methods
+ *@author DivyaPrakashAmar
+ */
 public class HomeScreen {
 	
 	AndroidDriver driver;
@@ -50,6 +55,9 @@ public class HomeScreen {
 	@FindBy(xpath = "//android.widget.TextView[@text='No Internet connection found. Please check your internet settings.']")
 	private WebElement internetWarningMessage;
 	
+	/**
+	 *This method is use to click On BadgeTab
+	 */
 	public void clickOnBadgeTab() {
 		try {
 			badgeTab.click();
@@ -58,7 +66,9 @@ public class HomeScreen {
 			System.out.println("Not able to click on badge Tab");
 		}
 	}
-	
+	/**
+	 *This method is use to verify UserName
+	 */
 	public void verifyUserName() {
 		try {
 			assertTrue(userName.isDisplayed());
@@ -67,7 +77,9 @@ public class HomeScreen {
 			System.out.println("userName is not displayed");
 		}
 	}
-	
+	/**
+	 *This method is use to click On HamburgerTab
+	 */
 	public void clickOnHamburgerTab() {
 		try {
 			hamburgerTab.click();
@@ -76,7 +88,9 @@ public class HomeScreen {
 			System.out.println("Not able to click on hamburger tab");
 		}
 	}
-	
+	/**
+	 *This method is use to click On TotalGradingRequest
+	 */
 	public void clickOnTotalGradingRequest() {
 		try {
 			totalGradingRequest.click();
@@ -84,7 +98,9 @@ public class HomeScreen {
 			System.out.println("Not able to click on TotalGradingRequest");
 		}
 	}
-	
+	/**
+	 *This method is use to click On RequestsTab
+	 */
 	public void clickOnRequestsTab() {
 		try {
 			requests.click();
@@ -93,7 +109,9 @@ public class HomeScreen {
 			System.out.println("Not able to click on requests tab");
 		}
 	}
-	
+	/**
+	 *This method is use to verify PageTitle
+	 */
 	public void verifyPageTitle() {
 		try {
 			assertTrue(pageTitle.isDisplayed());
@@ -102,7 +120,9 @@ public class HomeScreen {
 			System.out.println("pageTitle is not displayed");
 		}
 	}
-	
+	/**
+	 *This method is use to verify HomeUi
+	 */
 	public void verifyHomeUi() {
 		try {
 			if(homeTab.isDisplayed() && requests.isDisplayed() && myQuiz.isDisplayed()) {
@@ -114,7 +134,9 @@ public class HomeScreen {
 			System.out.println("UI elements are not displayed");
 		}
 	}
-	
+	/**
+	 *This method is use to verify InternetWarning Message
+	 */
 	public void verifyInternetWarningMessage() {
 		try {
 			assertTrue(internetWarningMessage.isDisplayed());
